@@ -29,11 +29,11 @@ function transMonthDataFormat(src) {
 function renderMonthChart(month, data) {
   var returnHtml = "";
   returnHtml += '<li>';
-  returnHtml += month + '£º';
-  returnHtml += '<span id="test" name="aqi-bad" class="aqi-bad" style="width:' + data.aqiBad * 20 + 'px">'+data.aqiBad+'Ìì</span>';
-  returnHtml += '<span name="aqi-common" class="aqi-common" style="width:' + data.aqiCommon * 20 + 'px">'+data.aqiCommon+'Ìì</span>';
-  returnHtml += '<span name="aqi-light" class="aqi-light" style="width:' + data.aqiLight * 20 + 'px">'+data.aqiLight+'Ìì</span>';
-  returnHtml += '<span name="aqi-good" class="aqi-good" style="width:' + data.aqiGood * 20 + 'px">'+data.aqiGood+'Ìì</span>';
+  returnHtml += month + 'ï¼š';
+  returnHtml += '<span id="test" name="aqi-bad" class="aqi-bad" style="width:' + data.aqiBad * 20 + 'px">'+data.aqiBad+'å¤©</span>';
+  returnHtml += '<span name="aqi-common" class="aqi-common" style="width:' + data.aqiCommon * 20 + 'px">'+data.aqiCommon+'å¤©</span>';
+  returnHtml += '<span name="aqi-light" class="aqi-light" style="width:' + data.aqiLight * 20 + 'px">'+data.aqiLight+'å¤©</span>';
+  returnHtml += '<span name="aqi-good" class="aqi-good" style="width:' + data.aqiGood * 20 + 'px">'+data.aqiGood+'å¤©</span>';
   returnHtml += '</li>';
   return returnHtml;
 }
@@ -41,7 +41,7 @@ function renderMonthChart(month, data) {
 function aqiChartGenerator(src) {
   var chartHtml = "";
   for (var i = 0, len = src.length; i < len; i++) {
-    var monthText = (i + 1) + 'ÔÂ';
+    var monthText = (i + 1) + 'æœˆ';
     var monthData = transMonthDataFormat(src[i]);
     chartHtml += renderMonthChart(monthText, monthData);
   }
