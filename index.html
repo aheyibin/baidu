@@ -1,7 +1,6 @@
 <html>
 <head>
 <script type="text/javascript">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 var aqiSourceData = [
   [32, 54, 76, 121, 145, 167, 200, 300, 500, 500, 500, 500, 430, 320, 15, 15, 26, 43, 41, 200, 345],
   [32, 54, 76, 121, 145, 222, 11, 223, 50, 11, 11, 500, 430, 320, 15, 15, 26, 43, 41, 20, 345],
@@ -33,11 +32,11 @@ function transMonthDataFormat(src) {
 function renderMonthChart(month, data) {
   var returnHtml = "";
   returnHtml += '<li>';
-  returnHtml += month + 'Ôºö';
-  returnHtml += '<span id="test" name="aqi-bad" class="aqi-bad" style="width:' + data.aqiBad * 20 + 'px">'+data.aqiBad+'Â§©</span>';
-  returnHtml += '<span name="aqi-common" class="aqi-common" style="width:' + data.aqiCommon * 20 + 'px">'+data.aqiCommon+'Â§©</span>';
-  returnHtml += '<span name="aqi-light" class="aqi-light" style="width:' + data.aqiLight * 20 + 'px">'+data.aqiLight+'Â§©</span>';
-  returnHtml += '<span name="aqi-good" class="aqi-good" style="width:' + data.aqiGood * 20 + 'px">'+data.aqiGood+'Â§©</span>';
+  returnHtml += month + '£∫';
+  returnHtml += '<span id="test" name="aqi-bad" class="aqi-bad" style="width:' + data.aqiBad * 20 + 'px">'+data.aqiBad+'ÃÏ</span>';
+  returnHtml += '<span name="aqi-common" class="aqi-common" style="width:' + data.aqiCommon * 20 + 'px">'+data.aqiCommon+'ÃÏ</span>';
+  returnHtml += '<span name="aqi-light" class="aqi-light" style="width:' + data.aqiLight * 20 + 'px">'+data.aqiLight+'ÃÏ</span>';
+  returnHtml += '<span name="aqi-good" class="aqi-good" style="width:' + data.aqiGood * 20 + 'px">'+data.aqiGood+'ÃÏ</span>';
   returnHtml += '</li>';
   return returnHtml;
 }
@@ -45,7 +44,7 @@ function renderMonthChart(month, data) {
 function aqiChartGenerator(src) {
   var chartHtml = "";
   for (var i = 0, len = src.length; i < len; i++) {
-    var monthText = (i + 1) + 'Êúà';
+    var monthText = (i + 1) + '‘¬';
     var monthData = transMonthDataFormat(src[i]);
     chartHtml += renderMonthChart(monthText, monthData);
   }
@@ -112,10 +111,10 @@ ul li{
 </head>
 <body>
 <ul class="aqi-chart-tooltip">
-  <li id="aqi-bad" onclick="hiddenbtn(this);">‰∏•ÈáçÊ±°Êüì</li>
-  <li id="aqi-common" onclick="hiddenbtn(this);">‰∏≠Â∫¶Ê±°Êüì</li>
-  <li id="aqi-light" onclick="hiddenbtn(this);">ËΩªÂ∫¶Ê±°Êüì</li>
-  <li id="aqi-good" onclick="hiddenbtn(this);">‰ºòËâØ</li>
+  <li id="aqi-bad" onclick="hiddenbtn(this);">—œ÷ÿŒ€»æ</li>
+  <li id="aqi-common" onclick="hiddenbtn(this);">÷–∂»Œ€»æ</li>
+  <li id="aqi-light" onclick="hiddenbtn(this);">«·∂»Œ€»æ</li>
+  <li id="aqi-good" onclick="hiddenbtn(this);">”≈¡º</li>
 </ul>
 <ul id="chart-wrapper" class="aqi-chart"></ul>
 <body/>
