@@ -1,7 +1,6 @@
 <html>
 <head>
 <script type="text/javascript">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 var aqiSourceData = [
   [32, 54, 76, 121, 145, 167, 200, 300, 500, 500, 500, 500, 430, 320, 15, 15, 26, 43, 41, 200, 345],
   [32, 54, 76, 121, 145, 222, 11, 223, 50, 11, 11, 500, 430, 320, 15, 15, 26, 43, 41, 20, 345],
@@ -66,6 +65,10 @@ function hiddenbtn(obj) {
     {document.getElementsByName(obj.id)[i].style.display = "inline-block";}
   }
 }
+//aqiChartGenerator(aqiSourceData);
+window.onload=function(){ 
+aqiChartGenerator(aqiSourceData);
+} 
 </script>
 <style type="text/css">
 ul {
@@ -119,10 +122,4 @@ ul li{
 </ul>
 <ul id="chart-wrapper" class="aqi-chart"></ul>
 <body/>
-<script type="text/javascript">
-aqiChartGenerator(aqiSourceData);
-//window.onload=function(){ 
-//aqiChartGenerator(aqiSourceData);
-//} 
-</script>
 </html>
