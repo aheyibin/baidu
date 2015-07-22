@@ -1,0 +1,40 @@
+ul {
+  list-style: none;
+  margin: 10px;
+  padding: 0
+}
+ul li{
+  list-style: none;
+  margin: 5px;
+  padding: 0
+}
+
+.aqi-chart-tooltip li {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.aqi-chart-tooltip li:hover {
+  background: orange;
+}
+
+.aqi-chart span {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+}
+
+.aqi-bad {
+  background: red;
+}
+.aqi-common {
+  background: yellow;
+}
+.aqi-light {
+  background: #00FF00;
+}
+.aqi-good {
+  background: blue;
+}
