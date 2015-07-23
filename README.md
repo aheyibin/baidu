@@ -16,7 +16,7 @@
 
 ## 任务展示
 
- [点击查看aheyibin的任务展示](http://aheyibin.github.io/baidu/)
+ [点击查看aheyibin的任务展示](http://aheyibin.github.io/baidu/task1)
 
 # 可视化扬帆班任务一：数据仪表盘
 
