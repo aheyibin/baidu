@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML>
+<HTML><HEAD><META content="IE=11.0000" http-equiv="X-UA-Compatible">
+<META charset="utf-8">     
+<TITLE>vis_yangfan_01</TITLE>     
+<LINK href="css/reset.css" rel="stylesheet" type="text/css">     
+<META name="GENERATOR" content="MSHTML 11.00.9600.17924">
+</HEAD> 
+<BODY>
+<DIV class="container">
+<DIV class="map">
+<H5>中国主要城市空气质量地图图表</H5>
+<DIV id="map_main" style="height: 400px;"></DIV></DIV>
+<DIV id="pie">
+<UL>
+  <LI class="active_li">环形图</LI>
+  <LI>饼状图</LI></UL>
+<DIV class="active_div" id="pie_1_main" style="height: 250px;"></DIV>
+<DIV id="pie_2_main" style="height: 250px;"></DIV></DIV>
+<DIV id="line_bar">
+<UL>
+  <LI class="active_li">折线图</LI>
+  <LI>柱状图</LI></UL>
+<DIV class="active_div" id="line_main" style="height: 250px;"></DIV>
+<DIV id="bar_main" style="height: 250px;"></DIV></DIV></DIV>
+<SCRIPT src="js/jquery.min.js"></SCRIPT>
+<SCRIPT src="js/echarts.js"></SCRIPT>
+<SCRIPT src="js/config.js"></SCRIPT>
+<SCRIPT src="js/map.js"></SCRIPT>
+<SCRIPT src="js/pie_1.js"></SCRIPT>
+<SCRIPT src="js/pie_2.js"></SCRIPT>
+<SCRIPT src="js/line.js"></SCRIPT>
+<SCRIPT src="js/bar.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+    var Pie = document.getElementById('pie');
+    var LineBar = document.getElementById('line_bar');
+    var Pie_Li = Pie.getElementsByTagName('li');
+    var LineBar_Li = LineBar.getElementsByTagName('li');
+    var Pie_Div = Pie.getElementsByTagName('div');
+    var LineBar_Div = LineBar.getElementsByTagName('div');
+    function Tab(oLi,oDiv){
+        for(var i = 0,len = oLi.length; i < len; i++){
+            oLi[i].index = i;
+            oLi[i].onclick = function(){
+                for(var i = 0,len = Pie_Li.length; i < len; i++){
+                    oLi[i].className = " ";
+                    oDiv[i].className = " ";
+                }
+                this.className = "active_li";
+                oDiv[this.index].className = "active_div";
+            }
+        }
+    }
+    Tab(Pie_Li,Pie_Div);
+    Tab(LineBar_Li,LineBar_Div);
+</SCRIPT>
+</BODY></HTML>
